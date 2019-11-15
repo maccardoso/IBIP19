@@ -15,6 +15,12 @@ The following co-authors contributed to the development of the training material
 #### Course Webpage
 This is the link to the [course webpage](http://gtpb.igc.gulbenkian.pt/bicourses/2019/IBIP19/), for further information about the course.
 
+#### Contributing
+Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+#### License
+This project is licensed under CC-BY 4.0 - see the [LICENSE.md](LICENSE.md) for details.
+
 ---
 
 [Github Pages](https://pages.github.com) provide a simple way to make a website using Markdown and git.

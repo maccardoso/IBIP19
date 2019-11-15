@@ -1,6 +1,12 @@
 ---
 layout: page
 title: Setting up Jupyter and R kernel in the command line
+schemadotorg:
+isPartOf:
+  - "@type": "CreativeWork"
+  - "@genre": "TrainingMaterial"
+    url: "https//:github.com/GTPB/IBIP19"
+    name: "IBIP19"
 ---
 
 This should work on a common Ubuntu Linux computer.

@@ -26,20 +26,17 @@ schemadotorg:
       alternateName: GTPB
       sameAs: "gtpb.igc.gulbenkian.pt/bicourses/index.html"
 
-  # predominant type
+  # predominant type of learning resources
   "learningResourceType": ["presentation", "exercise", "scripts", "handout"]
 
   # Contributor info
   contributor:
     - "@type": Person
       name: "David Bouyssié"
-      affiliation: "University of Toulouse, IPBS/CNRS, FR"
     - "@type": Person
       name: "Veit Schwämmle"
-      affiliation: "University of Southern Denmark, Odense, DK"
     - "@type": Person
       name: "Frank Spencer"
-      affiliation: "University of Bergen, Bergen, NO"
 
   # License & Language & url
   license: https://creativecommons.org/licenses/by/4.0/
