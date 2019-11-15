@@ -9,8 +9,7 @@ schemadotorg:
        # "name" -> The acronym of the course
        # "about" -> The extended name of the course
        # "description" -> Short description of the course
-  name: "IBIP19"
-  about: "Integrative Biological Interpretation using Proteomics"
+  name: "IBIP19 - Integrative Biological Interpretation using Proteomics"
   description: "Training Material aimed at researchers who are not expert in proteomics and want to integrate quantitative proteomics results into wider biomedical experiments."
 
   # Keywords -> Consult EDAM:Topic
