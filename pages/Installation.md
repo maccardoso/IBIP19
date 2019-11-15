@@ -2,9 +2,10 @@
 layout: page
 title: Setting up Jupyter and R kernel in the command line
 schemadotorg:
+  "@context": http://schema.org/
+  "@type": CreativeWork
+  "genre": TrainingMaterial
   isPartOf:
-    - "@type": "CreativeWork"
-    - "@genre": "TrainingMaterial"
       url: "https//:github.com/GTPB/IBIP19"
       name: "IBIP19"
 ---
