@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Answers-Proteogenomics</title>
+    
+    <meta name="author" content="GTPB">
+
+    <script type="application/ld+json">
+         null
+      </script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/kbroman.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+
+    <!-- atom & rss feed -->
+    <link href="nil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="nil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">GTPB Courses</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <h2> 
+      Answers-Proteogenomics <small></small>
+       
+  </h2>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h1 id="answers---proteogenomics">Answers - Proteogenomics</h1>
+
+<h2 id="1-novel-peptides">1. Novel Peptides</h2>
+
+<h5 id="based-on-your-knowledge-of-peptide-and-protein-identification-can-you-anticipate-challenges-posed-by-these-proteogenomic-databases">Based on your knowledge of peptide and protein identification, can you anticipate challenges posed by these proteogenomic databases?</h5>
+
+<p>The first challenge posed by proteogenomic databases is that they are very large, and therefore require much more computational power. The inflation in the collection of possible sequences, called search space, also increases the probability that two peptide sequences are similar, hence reducing the discrimination power of search engines. Thus reduced discrimination power results in a reduced identification rate at fixed error rate <a href="#references">(1)</a>. The estimation of error rates in proteomics usually relies on the target-decoy approach <a href="#references">(2)</a>, which is very reliable to track random matches, but not the errors due to partial matches <a href="#references">(3)</a>. Consequently, error rate estimation is very challenging in proteogenomic databases and requires spectrum-level inspection of the matches <a href="#references">(4)</a>. Finally, the increased number of similar sequences reduces the probability to find peptides unique to a protein, hence complexifying protein inference <a href="#references">(5)</a>.</p>
+
+<h5 id="what-do-the-different-columns-in-the-table-represent">What do the different columns in the table represent?</h5>
+
+<p>This document contains two tables, a list of novel peptides and a list of peptides containing single amino acid variants (SAAV).</p>
+
+<ul>
+  <li>Novel Peptides</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Peptide Sequence</td>
+      <td>The amino acid sequence of the identified peptide.</td>
+    </tr>
+    <tr>
+      <td>MSGF+ SpecEva</td>
+      <td>The score (e-value) produced by the search engine (ms-gf+) when evaluating the match between the peptide and the fragmentation spectrum. The lower, the better.</td>
+    </tr>
+    <tr>
+      <td># PSMs</td>
+      <td>The number of spectra where this peptide was matched. The more, the better.</td>
+    </tr>
+    <tr>
+      <td>Annotation - GRCh37 - hg19</td>
+      <td>The annotation of the genetic locus coding the peptide. <em>GRCh37/hg19</em> corresponds to the build of the genome used for the analysis.</td>
+    </tr>
+    <tr>
+      <td>Chromosome, start, end, strand, locus number</td>
+      <td>Genomic coordinates of the locus coding the peptide in the GRCh37 build.</td>
+    </tr>
+    <tr>
+      <td>Category and sequence similarity to known proteins</td>
+      <td>Quality control report on possible mismatch with other proteins. Note that this is provided at two different steps of the bioinformatic pipeline. See <em>Proteogenomics search and Class-specific FDR</em> in the <a href="../resources/Johansson_et_al_breast_cancer_quantitative_proteome_and_proteogenomic_landscape/supplementary_information.pdf">Supplementary Information</a>.</td>
+    </tr>
+    <tr>
+      <td>Peptide explained by nsSNP in CanProVar 2.0</td>
+      <td>Known variation that could explain the peptide.</td>
+    </tr>
+    <tr>
+      <td>hg38_coordinates</td>
+      <td>Genomic coordinates of the locus coding the peptide in the <em>GRCh38/hg38</em> build.</td>
+    </tr>
+    <tr>
+      <td>(closest) matched protein</td>
+      <td>Protein best matched with this peptide.</td>
+    </tr>
+    <tr>
+      <td>Nterm.seq.3aa. - Aligned sequence - Cterm.seq.3aa.</td>
+      <td>Sequence, upstream, and downstream amino acids in the mached protein.</td>
+    </tr>
+    <tr>
+      <td>Identity</td>
+      <td>Identity score between the peptide and its matched counterpart. The higher the better.</td>
+    </tr>
+    <tr>
+      <td>Peptide length - Alignment length - # mismatches - # gaps</td>
+      <td>Summary information on the identified and matched peptides.</td>
+    </tr>
+    <tr>
+      <td>top 0.2% MHCflurry</td>
+      <td>class I peptide/MHC binding affinity prediction: see <em>NSearch neoantigen candidates in draft proteomes data and MHC binding prediction</em> in the <a href="../resources/Johansson_et_al_breast_cancer_quantitative_proteome_and_proteogenomic_landscape/supplementary_information.pdf">Supplementary Information</a>.</td>
+    </tr>
+    <tr>
+      <td>Identified in Kim et al draft proteome</td>
+      <td>Indicates whether the peptide was identified in <a href="#references">(6)</a>.</td>
+    </tr>
+    <tr>
+      <td>Class</td>
+      <td>Class of the locus coding this peptide.</td>
+    </tr>
+    <tr>
+      <td>Associated gene (closest genes in the genome)</td>
+      <td>Nearest gene for the given locus.</td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td>Category of the nearest gene.</td>
+    </tr>
+    <tr>
+      <td>TMT quantification</td>
+      <td>Abundance of the peptide in the different tumors screened.</td>
+    </tr>
+    <tr>
+      <td>Orthogonal data</td>
+      <td>Additional data on the peptide: see <em>Orthogonal validation data of proteogenomics searches</em> in the <a href="../resources/Johansson_et_al_breast_cancer_quantitative_proteome_and_proteogenomic_landscape/supplementary_information.pdf">Supplementary Information</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>SAAV</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Peptide Sequence</td>
+      <td>The amino acid sequence of the identified peptide.</td>
+    </tr>
+    <tr>
+      <td>Position of amino acid substitution</td>
+      <td>The position of the SAAV on the peptide sequence.</td>
+    </tr>
+    <tr>
+      <td>Matched protein(s)</td>
+      <td>The proteins matched.</td>
+    </tr>
+    <tr>
+      <td>Peptide sequence with modifications</td>
+      <td>The peptide sequence annotated with the masses of the modifications.</td>
+    </tr>
+    <tr>
+      <td>Peptide length</td>
+      <td>The sequence length in number of amino acids.</td>
+    </tr>
+    <tr>
+      <td>Fragmentation Method</td>
+      <td>The method used to fragment the peptide during mass spectrometry analysis.</td>
+    </tr>
+    <tr>
+      <td>Precursor m/z</td>
+      <td>The mass over charge ratio of the precursor selected for fragmentation.</td>
+    </tr>
+    <tr>
+      <td>IsotopeError</td>
+      <td>The isotopic difference between the measured m/z and the m/z of the peptide.</td>
+    </tr>
+    <tr>
+      <td>Precursor Error (ppm)</td>
+      <td>The relative difference in parts per million (ppm) between the measured m/z and the m/z of the peptide after isotopic correction.</td>
+    </tr>
+    <tr>
+      <td>Charge</td>
+      <td>The charge of the precursor.</td>
+    </tr>
+    <tr>
+      <td>DeNovoScore, MSGFScore</td>
+      <td>Score of the match between the fragmentation spectrum and the peptide. The higher, the better.</td>
+    </tr>
+    <tr>
+      <td>SpecEValue, EValue</td>
+      <td>E-value of the score of the match between the fragmentation spectrum and the peptide. The lower, the better.</td>
+    </tr>
+    <tr>
+      <td>SAAV Only - Peptide FDR</td>
+      <td>FDR estimation at the given score for the SAAV peptides only. See <em>Proteogenomics search and Class-specific FDR</em> in the <a href="../resources/Johansson_et_al_breast_cancer_quantitative_proteome_and_proteogenomic_landscape/supplementary_information.pdf">Supplementary Information</a>.</td>
+    </tr>
+    <tr>
+      <td>SpectraFile, TMT set, ScanNum</td>
+      <td>File, TMT set, and scan number for the spectrum where the peptide was identified.</td>
+    </tr>
+    <tr>
+      <td>SpectrumAI verification</td>
+      <td>Summary information of the spectrum-level validation of the SAAV using flanking fragment ions <a href="#references">(4)</a>.</td>
+    </tr>
+    <tr>
+      <td>TMT intensity</td>
+      <td>Intensity of the fragment ions from the different TMT channels.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="can-you-speculate-on-how-these-different-classes-of-loci-can-yield-novel-peptides">Can you speculate on how these different classes of loci can yield novel peptides?</h5>
+
+<p>Mutations can yield new coding regions through alteration of start, stop, and splicing information. Exons can hence be extended by upstream and downstream regions, extending canonical sequences and disrupting splicing. Alternatively, completely new peptides or proteins can be created from intergenic regions.</p>
+
+<h5 id="what-do-these-categories-represent">What do these categories represent?</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th># Peptides</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pseudogene</td>
+      <td>93</td>
+      <td>Pseudogenes are segments of DNA related to real genes but have lost functionality.</td>
+    </tr>
+    <tr>
+      <td>5UTR</td>
+      <td>43</td>
+      <td>5′ untranslated region (5′ UTR) is directly upstream of the translated region.</td>
+    </tr>
+    <tr>
+      <td>intronic</td>
+      <td>33</td>
+      <td>Introns are nucleotide sequence removed by RNA splicing.</td>
+    </tr>
+    <tr>
+      <td>exonic.Alt.ORF</td>
+      <td>18</td>
+      <td>Exons from alternative open reading frames.</td>
+    </tr>
+    <tr>
+      <td>exon_extension</td>
+      <td>14</td>
+      <td>Extension of exon.</td>
+    </tr>
+    <tr>
+      <td>ncRNA</td>
+      <td>12</td>
+      <td>Non-coding RNA</td>
+    </tr>
+    <tr>
+      <td>intergenic</td>
+      <td>2</td>
+      <td>Intergenic section</td>
+    </tr>
+    <tr>
+      <td>3UTR</td>
+      <td>1</td>
+      <td>3′ untranslated region (3′ UTR) is directly downstream of the translated region.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-variation-analysis">2. Variation Analysis</h2>
+
+<h5 id="if-we-assume-a-linear-relationship-between-number-of-alleles-and-peptide-abundance-what-should-be-the-peptide-distribution-for-each-genotype">If we assume a linear relationship between number of alleles and peptide abundance, what should be the peptide distribution for each genotype?</h5>
+
+<p><img src="resources/images/peptideAllelePlot.png?raw=true" alt="peptide_per_allele" title="Peptide abundance vs genotype" /></p>
+
+<p>Under this hypothesis: (1) if the genotype is homozygous for the reference allele, <em>AA</em>, one would expect only peptides carrying the reference amino acid; (2) if the genotype is heterozygous, <em>AB</em>, one would expect a 50-50 distribution between peptides carrying the reference and alternative amino acids; (3) if the genotype is homozygous for the alternative allele, <em>BB</em>, one would expect only peptides carrying the alternative amino acid.</p>
+
+<h5 id="how-do-we-need-to-transform-the-tables-to-compare-saav-peptide-level-intensities-to-gene-level-intensities">How do we need to transform the tables to compare SAAV peptide-level intensities to gene-level intensities?</h5>
+
+<p>The data in the SAAV peptides table are not normalized. Thus, we need to scale all intensities using the reference channel (131). Each line represents a PSM, peptides might therefore be present multiple times, we need to aggregate these different measurements per peptide in order to have a peptide-level table. Then, the different TMT batches need to be aligned and linked to the different tumors. Finally, the gene-level intensities need to be extracted for each peptide. Note that one peptide might map to multiple genes.</p>
+
+<h5 id="why-can-there-be-multiple-peptide-per-gene-and-gene-per-peptide-is-it-correct-to-represent-peptides-by-their-sequence">Why can there be multiple peptide per gene, and gene per peptide? Is it correct to represent peptides by their sequence?</h5>
+
+<p>A gene can contain multiple peptides with different SAAV. Conversely, a peptide carrying an SAAV can be shared between different genes. Consequently genes and peptides can appear multiple times in the table and their quantification values as well.</p>
+
+<p>If a protein carries a post-translational modification (PTM), its abundance and function will differ from the non-modified counterpart. Therefore, modifications ough to be considered when comparing peptides. In the data set of this tutorial, modifications were not accounted for.</p>
+
+<h5 id="why-are-all-intensities-at-the-bottom-how-can-we-transform-the-data-to-better-visualize-these-distributions">Why are all intensities at the bottom? How can we transform the data to better visualize these distributions?</h5>
+
+<p>On a proteome-wide scale, measured peptide and protein abundances generally distribute log-normally. This means that they span several orders of magnitude, with most abundances are low, with a long tail towards high abundances, and a short tail towards lower abundances. Note that the detectability and quantification performance strongly influence this distribution, and it can be that the distribution of protein abundances in the sample differ from what we measure.</p>
+
+<p>In order to visualize such distributions, you can transform the intensities logarithmically, or use a log-scale on the x-axis, then their distribution should look bell-shaped and symmetrical.</p>
+
+<p><img src="resources/images/peptideProteinDistribution.png?raw=true" alt="abundance_distribution" title="Peptide and Protein abundance distributions" /></p>
+
+<h5 id="why-does-the-curve-have-this-shape"><em>Why does the curve have this shape?</em></h5>
+
+<p>The model used for normalization is based on a log-Normal distribution, see the <code class="highlighter-rouge">family</code> argument provided to <em>GAMLSS</em>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">model</span> <span class="p">&lt;-</span> <span class="n">gamlss</span><span class="p">(</span>
+        <span class="n">formula</span> <span class="p">=</span> <span class="k">as</span><span class="p">.</span><span class="n">formula</span><span class="p">(</span><span class="n">paste0</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="s2">" ~ x"</span><span class="p">)),</span>
+        <span class="n">family</span> <span class="p">=</span> <span class="n">LOGNO</span><span class="p">,</span>
+        <span class="n">data</span> <span class="p">=</span> <span class="n">trainingDF</span><span class="p">,</span>
+        
+    <span class="p">)</span>
+</code></pre></div></div>
+
+<p>This accounts for the log-normal distribution of the intensities observed in the previous question, and explains why the curve has this logarithmic shape. Using a log-scale on the x axis therefore aligns the points.</p>
+
+<p><img src="resources/images/zLogIntensity.png?raw=true" alt="zScore_log" title="Z-score vs log" /></p>
+
+<h2 id="3-cna-protein">3. CNA-protein</h2>
+
+<h5 id="what-do-the-columns-represent-what-is-the-difference-between-pearson-and-spearman-correlations">What do the columns represent? What is the difference between Pearson and Spearman correlations?</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>gene, chromosome, start, end, band, position</td>
+      <td>The chromosomic coordinates of the CNA.</td>
+    </tr>
+    <tr>
+      <td>mRNA_ANOVA_AdjPval, protein_ANOVA_AdjPval</td>
+      <td>The significance that the RNA or protein, respectively, are differentially abundant between the tumors using an ANOVA analysis. [-log10]</td>
+    </tr>
+    <tr>
+      <td>mRNA_Pearson_correlation, protein_Pearson_correlation</td>
+      <td>The Pearson correlation coefficient (R) for the RNA or the protein abundance, respectively, with the CNA.</td>
+    </tr>
+    <tr>
+      <td>mRNA_Pearson_pval, protein_Pearson_pval</td>
+      <td>The Pearson correlation significance for the RNA or the protein abundance, respectively, with the CNA.</td>
+    </tr>
+    <tr>
+      <td>mRNA_Spearman_correlation, protein_Spearman_correlation</td>
+      <td>The Spearman correlation coefficient (R) for the RNA or the protein abundance, respectively, with the CNA.</td>
+    </tr>
+    <tr>
+      <td>mRNA_Spearman_pval, protein_Spearman_pval</td>
+      <td>The Spearman correlation significance for the RNA or the protein abundance, respectively, with the CNA.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The Spearman correlation is a Pearson correlation of the ranks of the values. Working on the ranks is more robust, especially towards outliers. See the R help on <em>cor</em> for more details: <code class="highlighter-rouge">?cor</code>.</p>
+
+<h5 id="what-do-the-mixing-probabilities-means-and-variances-represent">What do the <em>Mixing probabilities</em>, <em>Means</em>, and <em>Variances</em> represent?</h5>
+
+<p>The Model suggested using two gaussian distributions. This is based on the <a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">Bayesian Information Criterion (BIC)</a>, which evaluates the quality of the fitting relatively to the model complexity: an overly complex model will fit very well training data but is likely to overfit, while an overly simple model is unlikely to overfit but is likely to underperform. Optimizing the BIC allows finding a trade-off between the two. Below, the BIC is plotted against the number of components.</p>
+
+<p><img src="resources/images/gmm_n.png?raw=true" alt="gmm_n_bic" title="BIC vs. n" /></p>
+
+<p>For each Gaussian distribution, mclust returns the following paramters:</p>
+<ul>
+  <li>Mixing probabilities: the contribution of the distribution to the overall density. Their sum should be 1.</li>
+  <li>Mean: the mean of the distribution.</li>
+  <li>Variance: the variance of the distribution.</li>
+</ul>
+
+<h5 id="based-on-this-how-many-cnas-are-considered-attenuated">Based on this, how many CNAs are considered attenuated?</h5>
+
+<p>The mixing probability of the distribution with lowest mean (<em>i.e.</em> most attenuated) is approx 45.6%, considering 9533 CNAs this makes 4343 CNAs attenuated.</p>
+
+<h5 id="which-component-represents-the-attenuated-distribution-how-can-we-classify-cnas-based-on-these-distributions">Which component represents the attenuated distribution? How can we classify CNAs based on these distributions?</h5>
+
+<p>The distribution to the left, i.e. lowest mean, is the one representing the attenuated population.</p>
+
+<p>It is possible to use the ratio of a distribution to the sum to estimate the probability at a given attenuation score to belong from either category. Alternatively, it is possible to use the cumulative distribution function to evaluate the appartenance to a population.</p>
+
+<h5 id="using-this-threshold-what-is-the-share-of-cnas-considered-attenuated-that-would-come-from-the-component-2-distribution-what-is-the-share-of-cnas-considered-not-attenuated-that-would-come-from-the-component-1-how-will-this-influence-the-analyses">Using this threshold: What is the share of CNAs considered attenuated that would come from the component 2 distribution? What is the share of CNAs considered not attenuated that would come from the component 1? How will this influence the analyses?</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Component 1</th>
+      <th>Component 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Attenuated</td>
+      <td>1383</td>
+      <td>255</td>
+    </tr>
+    <tr>
+      <td>Not attenuated</td>
+      <td>3049</td>
+      <td>4846</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Approximately 16% of the CNAs considered attenuated are derived from the second component. Approximately 39% of the CNAs considered not attenuated are derived from the first component. This means that our classification has many false positives/negatives, which will reduce our ability to find association with biological features.</p>
+
+<h5 id="what-is-the-number-of-proteins-per-gene-reported-in-the-cna-table-how-is-this-going-to-influence-the-analysis">What is the number of proteins per gene reported in the CNA table? How is this going to influence the analysis?</h5>
+
+<p>According to the UniProt mapping, the number of proteins per gene ranges from 1 to approx. 8000. The genes mapping to most proteins are listed in the table below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gene</th>
+      <th># accessions mapped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HLA-B</td>
+      <td>7983</td>
+    </tr>
+    <tr>
+      <td>HLA-A</td>
+      <td>6874</td>
+    </tr>
+    <tr>
+      <td>HLA-C</td>
+      <td>6516</td>
+    </tr>
+    <tr>
+      <td>HLA-DRB1</td>
+      <td>3095</td>
+    </tr>
+    <tr>
+      <td>HLA-DQB1</td>
+      <td>2145</td>
+    </tr>
+    <tr>
+      <td>HLA-DPB1</td>
+      <td>1761</td>
+    </tr>
+    <tr>
+      <td>HLA-DQA1</td>
+      <td>207</td>
+    </tr>
+    <tr>
+      <td>ATXN3</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <td>HLA-DPA1</td>
+      <td>127</td>
+    </tr>
+    <tr>
+      <td>BRCA1</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <td>TP53</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <td>APOL1</td>
+      <td>107</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The result for each gene can be obtained using the following script in R.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>geneOccurenceDF &lt;- as.data.frame(table(accessionsMapping$gene))
+occurrenceFrequencyDF &lt;- as.data.frame(table(geneOccurenceDF[[2]]))
+</code></pre></div></div>
+
+<p>When mapping the CNA results to functional databases, these genes are going to map everywhere in the proteome, reducing our ability to find meaningful information.</p>
+
+<h2 id="3-rna-protein">3. RNA-protein</h2>
+
+<h5 id="what-are-the-advantages-and-shortcomings-of-using-transcript-sequences-instead-of-or-in-addition-to-genomic-data"><em>What are the advantages and shortcomings of using transcript sequences instead of or in addition to genomic data?</em></h5>
+
+<p>Transcript sequences have the great advantage to provide information on splicing, and might therefore prove valuable to identify splice products. However, using RNA sequencing data strongly relies on the fact that the detected proteins are being transcribed in the samples undergoing sequencing and at the time of sequencing. The strategy will thus be blind to proteins produced elsewhere, or produced long before sampling. These limitations must be taken into account when deciding to complete or replace genomic- with transcript-level data, depending on the type of samples and sampling strategy.</p>
+
+<h5 id="how-does-the-correlation-evolve-relatively-to-the-abundance-of-the-protein-what-other-protein-characteristics-could-influence-the-correlation"><em>How does the correlation evolve relatively to the abundance of the protein? What other protein characteristics could influence the correlation?</em></h5>
+
+<p><img src="resources/images/rna_protein_cor_copy_number.png?raw=true" alt="rna_protein_abundance" title="RNA protein correlation vs. protein abundance" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; lmData &lt;- lm(formula = "mRNA_protein_correlation ~ z_protein_copy_number", data = rnaProteinCorDF)
+&gt; summary(lmData)
+
+Call:
+lm(formula = "mRNA_protein_correlation ~ z_protein_copy_number", 
+    data = rnaProteinCorDF)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.8644 -0.1537  0.0228  0.1760  0.5332 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)            0.426844   0.002363 180.602  &lt; 2e-16 ***
+z_protein_copy_number -0.010944   0.002368  -4.622 3.84e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2344 on 9838 degrees of freedom
+Multiple R-squared:  0.002167,	Adjusted R-squared:  0.002066 
+F-statistic: 21.37 on 1 and 9838 DF,  p-value: 3.842e-06
+
+&gt; lmRandom &lt;- lm(formula = "random_correlation ~ z_protein_copy_number", data = rnaProteinCorDF)
+&gt; summary(lmRandom)
+
+Call:
+lm(formula = "random_correlation ~ z_protein_copy_number", data = rnaProteinCorDF)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.53080 -0.10102  0.00126  0.10364  0.47654 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept)            0.0016688  0.0015182   1.099    0.272
+z_protein_copy_number -0.0003344  0.0015209  -0.220    0.826
+
+Residual standard error: 0.1506 on 9838 degrees of freedom
+Multiple R-squared:  4.913e-06,	Adjusted R-squared:  -9.673e-05 
+F-statistic: 0.04834 on 1 and 9838 DF,  p-value: 0.826
+</code></pre></div></div>
+
+<p>As illustrated above, the correlation is inversely associated with protein abundance, albeit with high variability. One can hypothesize that the cells reduce the need for transcription and translation in maintaining high levels of proteins, hence avoiding high energy costs associated with protein production, resulting in a reduced correlation between RNA and protein levels between cells. 
+Although significant, the slope is much lower than the variance. We could scale the correlation accordingly but that would only have minimal effect on the results.
+Additional parameters often used to evaluate RNA and protein correlation are the half-life of proteins, their structural stability, their integration in complexes, and their propensity to be ubiquitinated.</p>
+
+<h5 id="what-can-influence-the-distribution-of-p-values"><em>What can influence the distribution of p-values?</em></h5>
+
+<p>The Q-Q plot shows an inflation of p-values and a plateau in observed p-values. The relationship and overlap between pathways can result in distortion of the p-value distribution. In addition, we are estimating our p-values against randomized variables, which introduces variability in the summary statistics.</p>
+
+<h2 id="references">References</h2>
+
+<p>(1) <a href="https://www.ncbi.nlm.nih.gov/pubmed/28902424">Anatomy and evolution of database search engines-a central component of mass spectrometry based proteomic workflows</a></p>
+
+<p>(2) <a href="https://www.ncbi.nlm.nih.gov/pubmed/17327847">Target‐decoy search strategy for increased confidence in large‐scale protein identifications by mass spectrometyr</a></p>
+
+<p>(3) <a href="https://www.ncbi.nlm.nih.gov/pubmed/21995378">Analysis of the resolution limitations of peptide identification algorithms</a></p>
+
+<p>(4) <a href="https://www.ncbi.nlm.nih.gov/pubmed/29500430">Discovery of coding regions in the human genome by integrated proteogenomics analysis workflow</a></p>
+
+<p>(5) <a href="https://www.ncbi.nlm.nih.gov/pubmed/16009968">Interpretation of shotgun proteomic data: the protein inference problem</a></p>
+
+<p>(6) <a href="https://www.ncbi.nlm.nih.gov/pubmed/24870542">A draft map of the human proteome</a></p>
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p><small>
+  <!-- start of Karl's footer; modify this part -->
+          <a href="http://gtpb.igc.gulbenkian.pt/bicourses/index.html">GTPB</a>
+  <!-- end of Karl's footer; modify this part -->
+        </small></p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

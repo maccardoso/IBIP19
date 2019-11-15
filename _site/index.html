@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <meta name="author" content="GTPB">
+
+    <script type="application/ld+json">
+         {"@context":"http://schema.org/","@type":"CreativeWork","genre":"TrainingMaterial","name":"IBIP19","about":"Integrative Biological Interpretation using Proteomics","description":"Training Material aimed at researchers who are not expert in proteomics and want to integrate quantitative proteomics results into wider biomedical experiments.","keywords":"http://edamontology.org/topic_0091","audience":["Academia/ Research Institution","Industry","Non-Profit Organisation","Healthcare"],"author":[{"@type":"Organization","name":"The Gulbenkian Training Programme in Bioinformatics","alternateName":"GTPB","sameAs":"gtpb.igc.gulbenkian.pt/bicourses/index.html"}],"learningResourceType":["presentation","exercise","scripts","handout"],"contributor":[{"@type":"Person","name":"David Bouyssié","affiliation":"University of Toulouse, IPBS/CNRS, FR"},{"@type":"Person","name":"Veit Schwämmle","affiliation":"University of Southern Denmark, Odense, DK"},{"@type":"Person","name":"Frank Spencer","affiliation":"University of Bergen, Bergen, NO"}],"license":"https://creativecommons.org/licenses/by/4.0/","inLanguage":"en-us","url":"https//:github.com/GTPB/IBIP19"}
+      </script>
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/kbroman.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+
+    <!-- atom & rss feed -->
+    <link href="nil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="nil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">GTPB Courses</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <h2> 
+          IBIP19 <small>Integrative Biological Interpretation using Proteomics</small>
+       
+  </h2>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <p><img src="./assets/IBIP19_index_image.png" alt="" /></p>
+
+<h2 id="course-description">Course Description</h2>
+
+<p>Quantitative proteomics by mass spectrometry has become an essential tool for multi-omics studies aiming at answering important biological questions in a system-wide perspective. Proteomics data contain rich and deep information that can become challenging to extract, interpret, and interface with other experimental outcomes.
+This training course is aimed at researchers who are not expert in proteomics and want to integrate quantitative proteomics results into wider biomedical experiments. We will focus on quality control from an end-user perspective, link to the underlying genomic context, multivariate analysis, protein complexes investigation, and compare different platforms for biological interpretation.
+After the training, participants will be able to critically interpret results, troubleshoot analyses, and will be ready to successfully attend more specialized training <em>e.g.</em> in proteogenomics or biological network analysis.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Strictly speaking, there are no pre-requisites. Prior knowledge that will be useful, but not required:</p>
+<ul>
+  <li>Acquaintance with bottom-up proteomics workflow (sample preparation, LC-MS, terminology)</li>
+  <li>Basics of proteomics identification (databases, search engines, protein inference)</li>
+  <li>Basics of quantitative proteomics (labeling vs. label free, bioinformatics methods to infer peptide and protein abundances)</li>
+  <li>Awareness of protein inference issues in proteomics identification and quantification</li>
+  <li>Basics of scripting in R/Python</li>
+</ul>
+
+<h1 id="course-materials">Course Materials</h1>
+
+<p>To replicate and use the materials on Jupyter Notebook, please follow these <a href="./pages/Installation.md">instructions</a>.</p>
+
+<h3 id="using-proteomics-data">Using proteomics data</h3>
+<ul>
+  <li>What is proteomics good for <a href="pages/resources/slides/IBIP19%20-%20Introduction%20-%20What%20is%20proteomics%20good%20for.pdf">[Presentation]</a></li>
+  <li>If you receive some data, what do you look for, what can go wrong? <a href="pages/resources/slides/IBIP19%20-%20Quality%20Control.pdf">[Presentation]</a> <a href="pages/qc/raw-data-qc.ipynb">[Notebook Practical]</a></li>
+  <li>
+    <p>Quantitative data analysis: concepts and performance evaluation <a href="pages/resources/slides/IBIP19%20-%20Introduction%20-%20What%20is%20proteomics%20good%20for.pdf">[Presentation]</a> <a href="pages/qc/yeast-ups1.md">[Notebook Practical]</a></p>
+  </li>
+  <li>You want to reproduce the results of a paper - what do you need? <a href="pages/critical_manuscript_reviewing/check_for_ms_guidelines.ipynb">[Notebook Practical]</a></li>
+</ul>
+
+<h3 id="interpreting-proteomics-quantitative-data">Interpreting proteomics quantitative data</h3>
+<ul>
+  <li>Data screening, Multivariate analysis, Clustering <a href="pages/clustering/Multivariate analysis.ipynb">[Notebook Practical]</a></li>
+  <li>Biological interpretation <a href="pages/protein_complexes/Protein complexes.ipynb">[Notebook Practical]</a></li>
+  <li>Protein Complex analysis <a href="pages/biological_interpretation/blind_hackathon.ipynb">[Notebook Practical]</a></li>
+</ul>
+
+<h3 id="proteogenomics">Proteogenomics</h3>
+<ul>
+  <li>Non-canonical peptides <a href="pages/Proteogenomics.md">[Practical]</a></li>
+  <li>Single amino acid variants <a href="pages/Proteogenomics.md">[Practical]</a></li>
+  <li>Copy number alteration attenuation <a href="pages/Proteogenomics.md">[Practical]</a></li>
+  <li>RNA-protein correlation <a href="pages/Proteogenomics.md">[Practical]</a></li>
+</ul>
+
+<h3 id="wrap-up-sessions">Wrap-up sessions</h3>
+<ul>
+  <li>Wrap-up <a href="pages/resources/Wrap-up_Tuesday.pdf">[Pdf]</a></li>
+  <li>Wrap-up <a href="pages/resources/Wrap-up_Wednesday.pdf">[Pdf]</a></li>
+</ul>
+
+<hr />
+
+<h3 id="self-assesment"><a href="pages/participants/self_assesment.md">Self Assesment</a></h3>
+
+<h3 id="instructors"><a href="pages/instructors.md">Instructors</a></h3>
+
+<hr />
+
+<p>The source for this course webpage is <a href="https://github.com/GTPB/IBIP19">on github</a>.</p>
+
+<p><br /></p>
+
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">IBIP19</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">GTPB</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p><small>
+  <!-- start of Karl's footer; modify this part -->
+          <a href="http://gtpb.igc.gulbenkian.pt/bicourses/index.html">GTPB</a>
+  <!-- end of Karl's footer; modify this part -->
+        </small></p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+
